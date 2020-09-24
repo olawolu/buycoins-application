@@ -61,7 +61,14 @@ func Test_isProth(t *testing.T) {
 		args args
 		want bool
 	}{
-		// TODO: Add test cases
+		// TODO: Add test 
+		{
+			"positive test",
+			args{
+				41,
+			},
+			true,
+		},
 		{
 			"positive test",
 			args{
@@ -72,7 +79,21 @@ func Test_isProth(t *testing.T) {
 		{
 			"negative test",
 			args{
+				25,
+			},
+			false,
+		},
+		{
+			"negative test",
+			args{
 				73,
+			},
+			false,
+		},
+		{
+			"negative test",
+			args{
+				9,
 			},
 			false,
 		},
@@ -81,6 +102,33 @@ func Test_isProth(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := isProth(tt.args.n); got != tt.want {
 				t.Errorf("isProth() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+
+func Test_isPrime(t *testing.T) {
+	type args struct {
+		n int
+	}
+	tests := []struct {
+		name string
+		args args
+		want bool
+	}{
+		// TODO: Add test cases.
+		{
+			"negative test",
+			args{
+				25,
+			},
+			false,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := isPrime(tt.args.n); got != tt.want {
+				t.Errorf("isPrime() = %v, want %v", got, tt.want)
 			}
 		})
 	}

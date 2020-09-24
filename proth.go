@@ -7,14 +7,15 @@ import (
 )
 
 func isProth(in int) bool {
-	n := in - 1
-	for k := 1; k < (n / k); k += 2 {
-
-		// Check if k can divide n such that n/k is a power of 2
-		if n%k == 0 {
-			// Check if n/k is a power of two
-			if isPowerOfTwo(n / k) {
-				return true
+	if isPrime(in) {
+		n := in - 1
+		for k := 1; k < (n / k); k += 2 {
+			// Check if k can divide n such that n/k is a power of 2
+			if n%k == 0 {
+				// Check if n/k is a power of two
+				if isPowerOfTwo(n / k) {
+					return true
+				}
 			}
 		}
 	}
@@ -23,6 +24,15 @@ func isProth(in int) bool {
 
 func isPowerOfTwo(n int) bool {
 	return (n != 0) && ((n & (n - 1)) == 0)
+}
+
+func isPrime(n int) bool {
+	for i := 2; i <= n/2; i++ {
+		if n%i == 0 {
+			return false
+		}
+	}
+	return true
 }
 
 func main() {

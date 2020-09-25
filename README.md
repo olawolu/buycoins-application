@@ -1,6 +1,6 @@
 # Buycoins Research Assistant Application
 
-Below are answers to the questions required for applying for a research assistant role at buycoins.
+Below are answers to the questions required for applying for a research assistant role at Buycoins.
 
 ## Finance
 

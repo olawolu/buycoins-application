@@ -19,6 +19,7 @@ func isProth(in int) bool {
 		if n%k == 0 {
 			// Check if n/k is a power of two
 			if isPowerOfTwo(n / k) {
+				fmt.Printf("%v is a Proth number, ", in)
 				return true
 			}
 		}
@@ -47,7 +48,7 @@ func isProthPrime(n int) bool {
 		}
 		return false
 	}
-	fmt.Printf("%v is not a Proth number\n", n)
+	fmt.Printf("%v is not a Proth number, ", n)
 	return false
 }
 

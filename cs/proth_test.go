@@ -6,7 +6,7 @@ import (
 
 func Test_isProth(t *testing.T) {
 	type args struct {
-		in int
+		number int
 	}
 	tests := []struct {
 		name string
@@ -14,44 +14,44 @@ func Test_isProth(t *testing.T) {
 		want bool
 	}{
 		{
-			"positive test",
+			"prime - positive test",
 			args{
 				41,
 			},
 			true,
 		},
 		{
-			"negative test",
+			"prime - neative test",
 			args{
-				4,
+				7,
 			},
 			false,
 		},
 		{
-			"negative test",
+			"odd - positive test",
 			args{
 				25,
 			},
-			false,
+			true,
 		},
 		{
-			"negative test",
+			"odd - negative test",
 			args{
 				73,
 			},
 			false,
 		},
 		{
-			"negative test",
+			"even number",
 			args{
-				9,
+				10,
 			},
 			false,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := isProth(tt.args.in); got != tt.want {
+			if got := isProth(tt.args.number); got != tt.want {
 				t.Errorf("isProth() = %v, want %v", got, tt.want)
 			}
 		})
@@ -78,7 +78,7 @@ func Test_isPowerOfTwo(t *testing.T) {
 		{
 			"False test",
 			args{
-				5,
+				3,
 			},
 			false,
 		},
@@ -122,6 +122,13 @@ func Test_isPrime(t *testing.T) {
 				25,
 			},
 			false,
+		},
+		{
+			"positive test",
+			args{
+				3,
+			},
+			true,
 		},
 	}
 	for _, tt := range tests {

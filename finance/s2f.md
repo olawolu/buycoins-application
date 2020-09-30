@@ -21,3 +21,11 @@ Another flaw Tapon found include the fact that the price of gold is not driven b
 Also, there are metals with extremely low SF worth more than gold, an example of which is palladium. Palladium currently trades at $2,327.84 with a stock-to-flow ratio of 0.4 with gold trading at $1909.40.
 
 While a high SF value may be a necessary feature for a commodity to serve as a store of value, the metric says nothing about how market participants value said commodity.
+
+## References
+
+[1] <https://medium.com/@100trillionUSD/modeling-bitcoins-value-with-scarcity-91fa0fc03e25> — PlanB, 2019
+
+[2] <https://www.coindesk.com/why-the-stock-to-flow-bitcoin-valuation-model-is-wrong> — Nico Cordeiro, 2020
+
+[3] <https://francistapon.com/Work/WanderLearn-Podcast/8-Flaws-in-Bitcoin-s-Stock-to-Flow-Model-Will-Doom-It> — Francis Tapon, 2020
